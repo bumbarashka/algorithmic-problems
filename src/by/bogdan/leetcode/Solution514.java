@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class Solution514 {
     /**
-     * Solution using dynamic programming. O(n * m) efficiency and O(n * m) memory usage where <code>n = ring.length()</code>
+     * Solution using dynamic programming. O(n * m * n) efficiency and O(n * m) memory usage where <code>n = ring.length()</code>
      * and <code>m = key.length()</code>
      * @param ring
      *          a string, which represents the code engraved on the outer ring
@@ -22,10 +22,10 @@ public class Solution514 {
         int[][] dp = new int[keyLength + 1][ringLength];
         Map<Character, List<Integer>> characterPositions = getCharacterPositions(ring);
         for (int i = keyLength - 1; i >= 0; i--) {
-            char keyChar = key.charAt(i);
+            List<Integer> positions = characterPositions.get(key.charAt(i));
             for (int j = 0; j < ring.length(); j++) {
                 int minSteps = Integer.MAX_VALUE;
-                for(Integer pos: characterPositions.get(keyChar)) {
+                for(Integer pos: positions) {
                     int steps = Math.abs(pos - j);
                     steps = Math.min(steps, ringLength - steps) + dp[i + 1][pos];
                     if (steps < minSteps) {
@@ -39,7 +39,7 @@ public class Solution514 {
     }
 
     /**
-     * Recursive solution with memoization. O(n * m) efficiency and O(n * m) memory usage where <code>n = ring.length()</code>
+     * Recursive solution with memoization. O(n * m * log(n)) efficiency and O(n * m) memory usage where <code>n = ring.length()</code>
      * and <code>m = key.length()</code>
      * @param ring
      *          a string, which represents the code engraved on the outer ring
