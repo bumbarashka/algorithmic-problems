@@ -1,13 +1,10 @@
-Thumbs.db
-.DS_Store
 .gradle
 build/
-.idea
 *.iml
 *.ipr
 *.iws
-.project
-.settings
-.classpath
 contest/
 out/
+# Private solutions from leetcode.com
+Solution531.java
+Solution531Test.java
