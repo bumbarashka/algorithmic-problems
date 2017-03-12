@@ -6,7 +6,9 @@ build/
 contest/
 out/
 # Private solutions from leetcode.com
-Solution531.java
-Solution531Test.java
-Solution533.java
-Solution533Test.java
+/src/by/bogdan/leetcode/Solution531.java
+/test/by/bogdan/leetcode/Solution531Test.java
+/src/by/bogdan/leetcode/Solution533.java
+/test/by/bogdan/leetcode/Solution533Test.java
+/src/by/bogdan/leetcode/Solution536.java
+/test/by/bogdan/leetcode/Solution536Test.java
