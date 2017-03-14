@@ -14,9 +14,10 @@ public class Solution003Test {
 
     @Before
     public void setUp() throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(
-                this.getClass().getResourceAsStream(DATA_FILE_NAME)));
-        longString = reader.readLine();
+        try( BufferedReader reader = new BufferedReader(new InputStreamReader(
+                this.getClass().getResourceAsStream(DATA_FILE_NAME)))) {
+            longString = reader.readLine();
+        }
     }
 
     @Test

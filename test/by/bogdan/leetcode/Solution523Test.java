@@ -16,8 +16,9 @@ public class Solution523Test {
 
     @Before
     public void setUp() throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream(FILE_NAME)));
-        longArray = Arrays.stream(reader.readLine().split(",")).mapToInt(s -> Integer.parseInt(s.trim())).toArray();
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream(FILE_NAME)))) {
+            longArray = Arrays.stream(reader.readLine().split(",")).mapToInt(s -> Integer.parseInt(s.trim())).toArray();
+        }
     }
 
     @Test
