@@ -11,7 +11,7 @@ public class Solution088 {
     /**
      * Efficiensy O(n + m). Memory usage is O(1).
      * @param nums1 sorted integer array. It must contains space for all elements from <code>nums2</code> parameter
-     * @param m number of elements in nums1 without space for nums2 elements, so <code>nums1.length >= m + n</code>.
+     * @param m number of elements in nums1 without space for nums2 elements, so <code>nums1.length &gt;= m + n</code>.
      * @param nums2 sorted integer array.
      * @param n number of elements in nums2 array.
      */

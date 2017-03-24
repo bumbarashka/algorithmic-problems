@@ -20,12 +20,12 @@ public class Solution208 {
         }
     }
 
-    /** Initialize your data structure here. */
+    /* Initialize your data structure here. */
     public Solution208() {
         root = new TrieNode();
     }
 
-    /** Inserts a word into the trie. */
+    /* Inserts a word into the trie. */
     public void insert(String word) {
         TrieNode node = root;
         for (char c: word.toCharArray()) {
@@ -38,7 +38,7 @@ public class Solution208 {
         node.isValue = true;
     }
 
-    /** Returns if the word is in the trie. */
+    /* Returns if the word is in the trie. */
     public boolean search(String word) {
         TrieNode node = root;
         int i = 0;
@@ -49,7 +49,7 @@ public class Solution208 {
         return i == word.length() && node != null && node.isValue == true;
     }
 
-    /** Returns if there is any word in the trie that starts with the given prefix. */
+    /* Returns if there is any word in the trie that starts with the given prefix. */
     public boolean startsWith(String prefix) {
         TrieNode node = root;
         int i = 0;
