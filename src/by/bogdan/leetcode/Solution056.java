@@ -15,6 +15,7 @@ import java.util.List;
  */
 public class Solution056 {
     /**
+     * Time complexity is O(n*log(n)). Space complexity is O(n).
      * @param intervals a collection of intervals
      * @return a collection of all overlapping intervals
      */
